@@ -44,24 +44,12 @@ class Stories extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                    top: 25, bottom: 40, left: 60, right: 30),
-                width: 338,
-                height: 51,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: AppColor.white1,
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.only(left: 250),
-                  child: Icon(Icons.search),
-                ),
-              ),
+
               Container(
                 margin: const EdgeInsets.only(
                   right: 23,
                   left: 29,
+                  top: 40
                 ),
                 width: 529,
                 height: 450,
@@ -226,7 +214,7 @@ class Stories extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 22, left: 80),
                 child: CustomBtn(
-                  text: "",
+                  text: "ee",
                   width: 250,
                   height: 60,
                   onPressed: () {

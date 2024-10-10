@@ -177,7 +177,7 @@ class _GameState extends State<Game> {
                           "assets/images/rotate.png",
                           const GameMovementRotate(),
                           score7),
-                      child: game1("rotate.png", "Movement", "Game Rotate")),
+                      child: game1("rotate.png", "Movement", "G-Rout")),
                 ],
               ),
             ),
@@ -190,7 +190,7 @@ class _GameState extends State<Game> {
                 onPressed: () {
              setState(() {
               var cloth= getIt<CacheHelper>().getData(
-                   key: "clothe",);
+                   key: "cloth",);
                GoRouter.of(context).push('/HomePage',
                    extra:cloth);
 
