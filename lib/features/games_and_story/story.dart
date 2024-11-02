@@ -264,7 +264,7 @@ Widget tStory(String textStoryArabic,String ttStory)=>Container(
     onTap: () {
       setState(() {
         if (onpressed == true) {
-          textToSpeech(textStoryArabic, 'ar');
+          textToSpeech(textStoryArabic, 'ar-SA');
         } else {
           textToSpeech(ttStory, 'en-US');
         }

@@ -37,7 +37,7 @@ abstract class CustomTextStyles{
 
  );
  static const Interstyle25= TextStyle(
-  fontSize: 25,
+  fontSize: 16,
   fontWeight: FontWeight.bold,
   color: AppColor.black,
   fontFamily: "Inter",
