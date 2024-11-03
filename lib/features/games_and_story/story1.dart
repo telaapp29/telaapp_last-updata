@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:telaproject/core/database/sql.dart';
@@ -11,17 +10,17 @@ import '../../core/Functions/functions.dart';
 import '../../core/database/cash/cache_helper.dart';
 import '../../core/services/service_locator.dart';
 
-class Story2 extends StatefulWidget { 
-  Story2({super.key, required this.storyModel});
+class Story1 extends StatefulWidget {
+  Story1({super.key, required this.storyModel});
 
   StoryModel storyModel;
 
   @override
-  State<Story2> createState() => _StoryState();
+  State<Story1> createState() => _StoryState();
 }
 
 
-class _StoryState extends State<Story2> {
+class _StoryState extends State<Story1> {
   Sql sql = Sql();
   FlutterTts flutterTts = FlutterTts();
   GoogleTranslator translator = GoogleTranslator();
@@ -317,7 +316,6 @@ Widget ImageStory(String image)=> Container(
     String text9=translateTextOf9Story(widget.storyModel.textStory[8]);
     String text10=translateTextOf10Story(widget.storyModel.textStory[9]);
     String text11=translateTextOf11Story(widget.storyModel.textStory[10]);
-    String text12=translateTextOf11Story(widget.storyModel.textStory[11]);
     String text22=translateTextOf22Story("The End");
 
 
@@ -465,6 +463,8 @@ Widget ImageStory(String image)=> Container(
                   ImageStory(widget.storyModel.imageStory[11]),
                   tStory(text1,widget.storyModel.textStory[11]),
                   ImageStory(widget.storyModel.imageStory[12]),
+                  ImageStory(widget.storyModel.imageStory[13]),
+                  ImageStory(widget.storyModel.imageStory[14]),
                   tStory(text22,"The End"),
 
                 ],

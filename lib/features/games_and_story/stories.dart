@@ -61,6 +61,8 @@ class Stories extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
+
+                      // story 1
                       storyContainer(context, "Amahle wants to help!", [
                         "Every time Amahle wants to help, all she hears is \"NO\"\nMama picks up Amahle's toothbrush.\n\"Mama, can I squeeze the toothpaste?\"\n But Mama says...",
                         "No, Amahle, you are too young. ",
@@ -91,21 +93,23 @@ class Stories extends StatelessWidget {
                         "s24.JPG",
                         "s25.JPG",
                       ]),
-                      storyContainer(context, "A", [
-                        "Every time Amahle wants to help, all she hears is \"NO\"\nMama picks up Amahle's toothbrush.\n\"Mama, can I squeeze the toothpaste?\"\n But Mama says...",
-                        "No, Amahle, you are too young. ",
-                        "Baba is looking for his keys.\n\"Baba, can I drive your bakkie?\"\n  But Baba says... ",
-                        "No, Amahle, you are too young. ",
-                        "Mkhulu's chickens are clucking outside.\"Mkhulu, can I feed the chickens?\"\nBut Mkhulu says...",
-                        "No, Amahle, you are too young. ",
-                        "Amahle sees Mama in the kitchen.\"Mama, can I boil water for tea?\"\nBut Mama says...",
-                        "No, Amahle, you are too young. ",
-                        "Amahle runs over to\nGogo's vegetable garden.\n\"Gogo, can I water the plants?\"\nBut Gogo says...",
-                        "No, Amahle, you are too young. ",
-                        "Amahle grabs a book from the table.\"Mama, can I read to Teddy?\"\nBut Mama says...",
-                        "Yes you can, Amahle.",
+
+                      // story 2
+                      storyContainer(context, " Ouma’s amazing flowers", [
+                        "Ouma has a window box full of amazing flowers.\n Robyn wants to pick them all!",
+                        "Please don't pick the flowers, Robyn!\n Ouma loves to see them when she opens her curtains.",
+                        "Butterflies dance around the petals.\n It's so lovely to have these visitors.",
+                        "The bees use the flowers to make delicious honey.",
+                        "The flowers bring joy to everyone who walks past Ouma's house.",
+                        "The neighbour likes to smell them when he visits for tea.",
+                        "Sometimes,\n sunbirds drink the\n sweet nectar from the flowers.",
+                        "Look, a tiny beetle!\nIt shines in the sun.\nAnd there's a fat caterpillar!",
+                        "Please don't pick Ouma's flowers, Robyn!\nThey won't stay fresh very long.",
+                        "\"I won't pick them, Ouma,\" says Robyn, even though she really wants to.\nShe feels a little bit sad!",
+                        "Ouma doesn't want Robyn to be sad.\n\"Okay, Robyn,\" says Ouma. \"You can pick your favourite flower.\"",
+                        "\"And I have an idea...\nLet's plant more flowers together!\"",
                       ], [
-                        "IMG_6011.JPG",
+                        "a21.JPG",
                         "IMG_6012.JPG",
                         "IMG_6013.JPG",
                         "IMG_6014.JPG",
@@ -118,6 +122,54 @@ class Stories extends StatelessWidget {
                         "IMG_6021.JPG",
                         "IMG_6022.JPG",
                         "IMG_6023.JPG",
+
+                      ]),
+
+                      // story 3
+                      storyContainer(context, " Bean Hole!", [
+                        "When Tom was four years old, he had all of his teeth.\nBut when he turned five, one of them fell out.",
+                        "Just one tooth.\nIt was one on the bottom.",
+                        "Tom could feel the gum where the tooth used to be.\nIt felt all soft and squishy.",
+                        "Tom liked to poke his tongue through the hole.\nBut he missed having a tooth there.",
+                        " One day, he was eating his dinner, when he noticed he could do something special.",
+                        " You could poke a BEAN through the hole!",
+                        " \"Look at that,\" said\nMummy. \"You have a bean hole!\"",
+                        " Big brother Ben had already lost some of his teeth, but Ben didn't have a bean hole.\nHis teeth had already grown back again.",
+                        "\"Mum!\" said Ben. \"I want a bean hole!\"",
+                        " Mummy looked caretully at Ben's mouth.",
+                        " \"You don't have a bean hole,\" she said. \"But you might have space for a very small noodle. In\nfact, we could say that you have a noodle slit.\"",
+                        "\"A noodle slit!\"\nsaid Ben.\nHe was pleased with that, too.",
+                        "\"But a very thin one,\" said\nMummy.",
+                        "Tom discovered that his hole was not just a bean hole.\nIt was also a spaghetti hole.",
+                        " And a carrot-stick hole.",
+                        " And an asparagus hole.",
+                        "And a cheese hole.",
+                        " And a sticking-out-the-tongue hole!",
+                        " Tom was almost sad when his new tooth came through and he lost his bean hole.",
+                        " But luckily there were 19 more bean holes to come!",
+                      ], [
+                        "IMG_6071.JPG",
+                        "IMG_6072.JPG",
+                        "IMG_6073.JPG",
+                        "IMG_6074.JPG",
+                        "IMG_6075.JPG",
+                        "IMG_6076.JPG",
+                        "IMG_6077.JPG",
+                        "IMG_6078.JPG",
+                        "IMG_6079.JPG",
+                        "IMG_6080.JPG",
+                        "IMG_6081.JPG",
+                        "IMG_6082.JPG",
+                        "IMG_6083.JPG",
+                        "IMG_6084.JPG",
+                        "IMG_6085.JPG",
+                        "IMG_6086.JPG",
+                        "IMG_6087.JPG",
+                        "IMG_6088.JPG",
+                        "IMG_6089.JPG",
+                        "IMG_6090.JPG",
+                        "IMG_6091.JPG",
+                        "IMG_6092.JPG",
 
                       ]),
 
@@ -153,10 +205,14 @@ class Stories extends StatelessWidget {
       GestureDetector(
         onTap: () {
           if (nameOfStory == "Amahle wants to help!") {
-            GoRouter.of(context).push("/Story",
+            GoRouter.of(context).push("/Story1",
                 extra: StoryModel(nameOfStory, storyText, imageStory));
-          } else if (nameOfStory == "A") {
-            GoRouter.of(context).push("/Story",
+          } else if (nameOfStory == " Ouma’s amazing flowers") {
+            GoRouter.of(context).push("/Story2",
+                extra: StoryModel(nameOfStory, storyText, imageStory));
+          }
+          else if (nameOfStory == " Bean Hole!") {
+            GoRouter.of(context).push("/Story3",
                 extra: StoryModel(nameOfStory, storyText, imageStory));
           }
         }

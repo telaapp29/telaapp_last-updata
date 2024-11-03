@@ -13,7 +13,9 @@ import '../../features/games_and_story/games/english_fill_word.dart';
 import '../../features/games_and_story/games/movementgame.dart';
 import '../../features/games_and_story/history.dart';
 import '../../features/games_and_story/stories.dart';
-import '../../features/games_and_story/story.dart';
+import '../../features/games_and_story/story1.dart';
+import '../../features/games_and_story/story2.dart';
+import '../../features/games_and_story/story3.dart';
 import '../../features/login/login.dart';
 import '../../features/register/Siginup.dart';
 
@@ -50,9 +52,19 @@ final GoRouter router = GoRouter(
     ),
     //router of Story page
     GoRoute(
-      path: '/Story',
+      path: '/Story1',
       builder: (context, state) =>
-          Story(storyModel: state.extra! as StoryModel),
+          Story1(storyModel: state.extra! as StoryModel),
+    ),
+    GoRoute(
+      path: '/Story2',
+      builder: (context, state) =>
+          Story2(storyModel: state.extra! as StoryModel),
+    ),
+    GoRoute(
+      path: '/Story3',
+      builder: (context, state) =>
+          Story3(storyModel: state.extra! as StoryModel),
     ),
     //router of History page
     GoRoute(

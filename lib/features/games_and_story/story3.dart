@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:telaproject/core/database/sql.dart';
@@ -10,17 +11,17 @@ import '../../core/Functions/functions.dart';
 import '../../core/database/cash/cache_helper.dart';
 import '../../core/services/service_locator.dart';
 
-class Story extends StatefulWidget {
-  Story({super.key, required this.storyModel});
+class Story3 extends StatefulWidget {
+  Story3({super.key, required this.storyModel});
 
   StoryModel storyModel;
 
   @override
-  State<Story> createState() => _StoryState();
+  State<Story3> createState() => _StoryState();
 }
 
 
-class _StoryState extends State<Story> {
+class _StoryState extends State<Story3> {
   Sql sql = Sql();
   FlutterTts flutterTts = FlutterTts();
   GoogleTranslator translator = GoogleTranslator();
@@ -463,8 +464,23 @@ Widget ImageStory(String image)=> Container(
                   ImageStory(widget.storyModel.imageStory[11]),
                   tStory(text1,widget.storyModel.textStory[11]),
                   ImageStory(widget.storyModel.imageStory[12]),
+                  tStory(text1,widget.storyModel.textStory[12]),
                   ImageStory(widget.storyModel.imageStory[13]),
+                  tStory(text1,widget.storyModel.textStory[13]),
                   ImageStory(widget.storyModel.imageStory[14]),
+                  tStory(text1,widget.storyModel.textStory[14]),
+                  ImageStory(widget.storyModel.imageStory[15]),
+                  tStory(text1,widget.storyModel.textStory[15]),
+                  ImageStory(widget.storyModel.imageStory[16]),
+                  tStory(text1,widget.storyModel.textStory[16]),
+                  ImageStory(widget.storyModel.imageStory[17]),
+                  tStory(text1,widget.storyModel.textStory[17]),
+                  ImageStory(widget.storyModel.imageStory[18]),
+                  tStory(text1,widget.storyModel.textStory[18]),
+                  ImageStory(widget.storyModel.imageStory[19]),
+                  tStory(text1,widget.storyModel.textStory[19]),
+                  ImageStory(widget.storyModel.imageStory[20]),
+
                   tStory(text22,"The End"),
 
                 ],
