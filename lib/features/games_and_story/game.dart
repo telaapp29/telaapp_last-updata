@@ -196,8 +196,9 @@ class _GameState extends State<Game> {
                    extra: cloth,
                  );
                } else {
-                 print("القيمة cloth غير موجودة في الكاش");
-                 // يمكنك هنا تعيين قيمة افتراضية أو إظهار رسالة خطأ للمستخدم
+                 GoRouter.of(context).push(
+                   '/HomePage',
+                 );
                }
 
              });
