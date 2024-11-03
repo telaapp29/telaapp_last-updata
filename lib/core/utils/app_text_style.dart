@@ -6,13 +6,13 @@ import 'package:telaproject/core/utils/app_colors.dart';
 abstract class CustomTextStyles{
   //static  const TextAlign textAlign =TextAlign.center;
  static const Merriweather100style90= TextStyle(
- fontSize: 40,
+ fontSize: 20,
  color: AppColor.lightBlack,
  fontFamily: "MerriweatherBlack",
 
      );
  static const  MerriweatherBlackstyle24= TextStyle(
-  fontSize: 14,
+  fontSize: 10,
   color: AppColor.dBlack,
   fontFamily: "MerriweatherBlack",
 
@@ -31,7 +31,7 @@ abstract class CustomTextStyles{
 
  );
  static const  Merriweatherstyle15= TextStyle(
-  fontSize: 15,
+  fontSize: 10,
   color: AppColor.darkGray,
   fontFamily: "Merriweather",
 
@@ -44,7 +44,7 @@ abstract class CustomTextStyles{
 
  );
  static const Interstyle30= TextStyle(
-  fontSize: 30,
+  fontSize: 20,
   fontWeight: FontWeight.bold,
   color: AppColor.lightBlack,
   fontFamily: "Inter",

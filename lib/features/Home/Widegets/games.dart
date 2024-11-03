@@ -77,7 +77,7 @@ class _GamesState extends State<Games> {
                       child: Text(
                         widget.text,
                         style: CustomTextStyles.Interstyle25.copyWith(
-                            fontSize: 25),
+                            fontSize: 15),
                       ),
                     ),
                     decoration: BoxDecoration(

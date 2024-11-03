@@ -196,13 +196,13 @@ class _HomePageState extends State<HomePage> {
               color: AppColor.primaryColor),
           child: Padding(
             padding: const EdgeInsets.only(
-              left: 8,
-              top: 3,
+              left: 50,
+              top: 6,
             ),
             child: Text(
               "score ${sql.score} 🏆",
               style: CustomTextStyles.MerriweatherBlackstyle24.copyWith(
-                  color: AppColor.white, fontSize: 20),
+                  color: AppColor.white, fontSize: 15),
             ),
           ),
         ),
@@ -219,7 +219,7 @@ class _HomePageState extends State<HomePage> {
               ),
               Text(
                 "Tela",
-                style: CustomTextStyles.Interstyle30.copyWith(fontSize: 40),
+                style: CustomTextStyles.Interstyle30.copyWith(fontSize: 25),
               ),
             ],
           ),
