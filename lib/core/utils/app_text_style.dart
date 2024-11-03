@@ -18,7 +18,7 @@ abstract class CustomTextStyles{
 
  );
  static const  Merriweatherstyle40= TextStyle(
-  fontSize: 20,
+  fontSize: 15,
   color: AppColor.dBlack,
   fontFamily: "Merriweather",
 
