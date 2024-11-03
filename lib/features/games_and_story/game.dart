@@ -107,11 +107,11 @@ class _GameState extends State<Game> {
                   borderRadius: BorderRadius.circular(25),
                   color: AppColor.primaryColor),
               child: Padding(
-                padding: const EdgeInsets.only(left: 8, top: 3),
+                padding: const EdgeInsets.only(left: 50, top: 8),
                 child: Text(
                   "score ${sql.score} 🏆",
                   style: CustomTextStyles.MerriweatherBlackstyle24.copyWith(
-                      color: AppColor.white, fontSize: 20),
+                      color: AppColor.white, fontSize: 15),
                 ),
               ),
             ),
@@ -189,10 +189,16 @@ class _GameState extends State<Game> {
                 height: 60,
                 onPressed: () {
              setState(() {
-              var cloth= getIt<CacheHelper>().getData(
-                   key: "cloth",);
-               GoRouter.of(context).push('/HomePage',
-                   extra:cloth);
+               var cloth = getIt<CacheHelper>().getData(key: "clothe");
+               if (cloth != null) {
+                 GoRouter.of(context).push(
+                   '/HomePage',
+                   extra: cloth,
+                 );
+               } else {
+                 print("القيمة cloth غير موجودة في الكاش");
+                 // يمكنك هنا تعيين قيمة افتراضية أو إظهار رسالة خطأ للمستخدم
+               }
 
              });
                 },

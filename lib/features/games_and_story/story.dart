@@ -316,16 +316,6 @@ Widget ImageStory(String image)=> Container(
     String text9=translateTextOf9Story(widget.storyModel.textStory[8]);
     String text10=translateTextOf10Story(widget.storyModel.textStory[9]);
     String text11=translateTextOf11Story(widget.storyModel.textStory[10]);
-    String text12=translateTextOf12Story(widget.storyModel.textStory[11]);
-    String text13=translateTextOf13Story(widget.storyModel.textStory[12]);
-    String text14=translateTextOf14Story(widget.storyModel.textStory[13]);
-    String text15=translateTextOf15Story(widget.storyModel.textStory[14]);
-    String text16=translateTextOf16Story(widget.storyModel.textStory[15]);
-    String text17=translateTextOf17Story(widget.storyModel.textStory[16]);
-    String text18=translateTextOf18Story(widget.storyModel.textStory[17]);
-    String text19=translateTextOf19Story(widget.storyModel.textStory[18]);
-    String text20=translateTextOf20Story(widget.storyModel.textStory[19]);
-    String text21=translateTextOf21Story(widget.storyModel.textStory[20]);
     String text22=translateTextOf22Story("The End");
 
 
@@ -448,51 +438,33 @@ Widget ImageStory(String image)=> Container(
                       ),
                     ],
                   ),
+                  ImageStory(widget.storyModel.imageStory[0]),
                   tStory(text1,widget.storyModel.textStory[0]),
-                 ImageStory(widget.storyModel.imageStory[0]),
                   ImageStory(widget.storyModel.imageStory[1]),
+                  tStory(text1,widget.storyModel.textStory[1]),
                   ImageStory(widget.storyModel.imageStory[2]),
+                  tStory(text1,widget.storyModel.textStory[2]),
                   ImageStory(widget.storyModel.imageStory[3]),
-                  tStory(text2,widget.storyModel.textStory[1]),
+                  tStory(text1,widget.storyModel.textStory[3]),
                   ImageStory(widget.storyModel.imageStory[4]),
-                  tStory(text3,widget.storyModel.textStory[2]),
+                  tStory(text1,widget.storyModel.textStory[4]),
                   ImageStory(widget.storyModel.imageStory[5]),
-                  tStory(text4,widget.storyModel.textStory[3]),
+                  tStory(text1,widget.storyModel.textStory[5]),
                   ImageStory(widget.storyModel.imageStory[6]),
-                  tStory(text5,widget.storyModel.textStory[4]),
+                  tStory(text1,widget.storyModel.textStory[6]),
                   ImageStory(widget.storyModel.imageStory[7]),
-                  tStory(text6,widget.storyModel.textStory[5]),
+                  tStory(text1,widget.storyModel.textStory[7]),
                   ImageStory(widget.storyModel.imageStory[8]),
-                  tStory(text7,widget.storyModel.textStory[6]),
+                  tStory(text1,widget.storyModel.textStory[8]),
                   ImageStory(widget.storyModel.imageStory[9]),
-                  tStory(text8,widget.storyModel.textStory[7]),
+                  tStory(text1,widget.storyModel.textStory[9]),
                   ImageStory(widget.storyModel.imageStory[10]),
-                  tStory(text9,widget.storyModel.textStory[8]),
+                  tStory(text1,widget.storyModel.textStory[10]),
                   ImageStory(widget.storyModel.imageStory[11]),
-                  tStory(text10,widget.storyModel.textStory[9]),
+                  tStory(text1,widget.storyModel.textStory[11]),
                   ImageStory(widget.storyModel.imageStory[12]),
-                  tStory(text11,widget.storyModel.textStory[10]),
                   ImageStory(widget.storyModel.imageStory[13]),
-                  tStory(text12,widget.storyModel.textStory[11]),
                   ImageStory(widget.storyModel.imageStory[14]),
-                  tStory(text13,widget.storyModel.textStory[12]),
-                  ImageStory(widget.storyModel.imageStory[15]),
-                  tStory(text14,widget.storyModel.textStory[13]),
-                  ImageStory(widget.storyModel.imageStory[16]),
-                  tStory(text15,widget.storyModel.textStory[14]),
-                  ImageStory(widget.storyModel.imageStory[17]),
-                  tStory(text16,widget.storyModel.textStory[15]),
-                  ImageStory(widget.storyModel.imageStory[18]),
-                  tStory(text17,widget.storyModel.textStory[16]),
-                  ImageStory(widget.storyModel.imageStory[19]),
-                  tStory(text18,widget.storyModel.textStory[17]),
-                  ImageStory(widget.storyModel.imageStory[20]),
-                  tStory(text19,widget.storyModel.textStory[18]),
-                  ImageStory(widget.storyModel.imageStory[21]),
-                  tStory(text20,widget.storyModel.textStory[19]),
-                  ImageStory(widget.storyModel.imageStory[22]),
-                  tStory(text21,widget.storyModel.textStory[20]),
-                  ImageStory(widget.storyModel.imageStory[23]),
                   tStory(text22,"The End"),
 
                 ],
