@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:telaproject/core/utils/app_colors.dart';
@@ -196,8 +197,9 @@ class _GameState extends State<Game> {
                    extra: cloth,
                  );
                } else {
-                 print("القيمة cloth غير موجودة في الكاش");
-                 // يمكنك هنا تعيين قيمة افتراضية أو إظهار رسالة خطأ للمستخدم
+                 GoRouter.of(context).push(
+                   '/HomePage',
+                 );
                }
 
              });

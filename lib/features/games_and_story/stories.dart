@@ -91,6 +91,35 @@ class Stories extends StatelessWidget {
                         "s24.JPG",
                         "s25.JPG",
                       ]),
+                      storyContainer(context, "A", [
+                        "Every time Amahle wants to help, all she hears is \"NO\"\nMama picks up Amahle's toothbrush.\n\"Mama, can I squeeze the toothpaste?\"\n But Mama says...",
+                        "No, Amahle, you are too young. ",
+                        "Baba is looking for his keys.\n\"Baba, can I drive your bakkie?\"\n  But Baba says... ",
+                        "No, Amahle, you are too young. ",
+                        "Mkhulu's chickens are clucking outside.\"Mkhulu, can I feed the chickens?\"\nBut Mkhulu says...",
+                        "No, Amahle, you are too young. ",
+                        "Amahle sees Mama in the kitchen.\"Mama, can I boil water for tea?\"\nBut Mama says...",
+                        "No, Amahle, you are too young. ",
+                        "Amahle runs over to\nGogo's vegetable garden.\n\"Gogo, can I water the plants?\"\nBut Gogo says...",
+                        "No, Amahle, you are too young. ",
+                        "Amahle grabs a book from the table.\"Mama, can I read to Teddy?\"\nBut Mama says...",
+                        "Yes you can, Amahle.",
+                      ], [
+                        "IMG_6011.JPG",
+                        "IMG_6012.JPG",
+                        "IMG_6013.JPG",
+                        "IMG_6014.JPG",
+                        "IMG_6015.JPG",
+                        "IMG_6016.JPG",
+                        "IMG_6017.JPG",
+                        "IMG_6018.JPG",
+                        "IMG_6019.JPG",
+                        "IMG_6020.JPG",
+                        "IMG_6021.JPG",
+                        "IMG_6022.JPG",
+                        "IMG_6023.JPG",
+
+                      ]),
 
                       //storyContainer(context,"The ForgetFul Elephant","Peter the Elephant just can't remember a thing! What will he do when he forgets why he's made himself a reminder?!","s10.jpg","s11.jpg","s12.jpg"),
                     ],
@@ -123,9 +152,15 @@ class Stories extends StatelessWidget {
           List storyText, List imageStory) =>
       GestureDetector(
         onTap: () {
-          GoRouter.of(context).push("/Story",
-              extra: StoryModel(nameOfStory, storyText, imageStory));
-        },
+          if (nameOfStory == "Amahle wants to help!") {
+            GoRouter.of(context).push("/Story",
+                extra: StoryModel(nameOfStory, storyText, imageStory));
+          } else if (nameOfStory == "A") {
+            GoRouter.of(context).push("/Story",
+                extra: StoryModel(nameOfStory, storyText, imageStory));
+          }
+        }
+        ,
         child: Padding(
           padding: const EdgeInsets.only(top: 10, bottom: 10),
           child: Row(
