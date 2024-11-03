@@ -196,7 +196,7 @@ class _HomePageState extends State<HomePage> {
               color: AppColor.primaryColor),
           child: Padding(
             padding: const EdgeInsets.only(
-              left: 50,
+              left: 20,
               top: 6,
             ),
             child: Text(

@@ -35,7 +35,8 @@ class _SignInState extends State<SignIn> {
       getIt<CacheHelper>().saveData(key: "login", value: sql.userId);
       getIt<CacheHelper>().saveData(key: "loginTypeUser", value: sql.userType);
       // getIt<CacheHelper>().saveData(key: "scoreUser", value: sql.score);
-      GoRouter.of(context).push('/Clothes', extra: sql.userType);
+        GoRouter.of(context).push('/Clothes', extra: sql.userType);
+
     } else {
       setState(() {
         isLoginTrue = true;
