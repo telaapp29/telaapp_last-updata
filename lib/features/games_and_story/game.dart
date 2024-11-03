@@ -199,6 +199,8 @@ class _GameState extends State<Game> {
                } else {
                  GoRouter.of(context).push(
                    '/HomePage',
+                   extra: 'girl7.png',
+
                  );
                }
 
