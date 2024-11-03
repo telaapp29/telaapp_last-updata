@@ -109,13 +109,13 @@ class _ClothesState extends State<Clothes> {
                                             ? boyClothes[index]
                                             : girlClothes[index]);
                                   });
-                                  getIt<CacheHelper>().saveData(key: "clothe", value:(widget.typePerson == "Boy") ? boyClothes[index] : girlClothes[index] );
                                 } else {
                                   setState(() {
                                     isNoScore = true;
                                   });
                                 }
-                              }
+                              } getIt<CacheHelper>().saveData(key: "clothe", value:(widget.typePerson == "Boy") ? boyClothes[index] : girlClothes[index] );
+
 
                               var result3 = sql.insertData(
                                   'INSERT INTO Clothes(image_clothes,user_id) VALUES("${(widget.typePerson == "Boy") ? boyClothes[index] : girlClothes[index]}", "$userId")');

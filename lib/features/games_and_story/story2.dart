@@ -11,7 +11,7 @@ import '../../core/Functions/functions.dart';
 import '../../core/database/cash/cache_helper.dart';
 import '../../core/services/service_locator.dart';
 
-class Story2 extends StatefulWidget {
+class Story2 extends StatefulWidget { 
   Story2({super.key, required this.storyModel});
 
   StoryModel storyModel;

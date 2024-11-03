@@ -244,7 +244,8 @@ class _HomePageState extends State<HomePage> {
                 containerColor2: AppColor.white,
                 image: "assets/images/image2.png",
                 path: "/Game",
-              ),
+
+                  ),
               Games(
                 text: "Let's Play",
                 containerColor1: AppColor.yellow,

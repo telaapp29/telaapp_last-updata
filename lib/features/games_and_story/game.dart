@@ -191,17 +191,16 @@ class _GameState extends State<Game> {
                 onPressed: () {
              setState(() {
                var cloth = getIt<CacheHelper>().getData(key: "clothe");
+               var ut=getIt<CacheHelper>().getData(key: "loginTypeUser");
                if (cloth != null) {
                  GoRouter.of(context).push(
                    '/HomePage',
                    extra: cloth,
                  );
                } else {
-                 GoRouter.of(context).push(
-                   '/HomePage',
-                   extra: 'girl7.png',
 
-                 );
+               print('there is an error in saving clothe');
+
                }
 
              });
