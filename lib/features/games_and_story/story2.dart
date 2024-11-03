@@ -378,7 +378,7 @@ Widget ImageStory(String image)=> Container(
                           child: IconButton(
                               onPressed: () {
                                 setState(() {
-                                  onpressed = true;
+                                  onpressed = !onpressed;
                                   print(onpressed);
                                 });
                               },
