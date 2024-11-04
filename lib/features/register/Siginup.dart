@@ -67,8 +67,8 @@ class _SignUpState extends State<SignUp> {
             Padding(
               padding: const EdgeInsets.only(
                 bottom: 2,
-                right: 60,
-                left: 120,
+                right: 63,
+                left: 63,
               ),
               child: Form(
                 key: _formKey,
@@ -104,7 +104,7 @@ class _SignUpState extends State<SignUp> {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  top: 37, left: 145, right: 80, bottom: 101),
+                  top: 37, left: 99, right: 60, bottom: 101),
               child: CustomBtn(
                 text: "Register",
                 width: 279,
@@ -134,9 +134,8 @@ class _SignUpState extends State<SignUp> {
               ),
               child: Row(
                 children: [
-                  Text("Contact us ",
+                  Text("Contact Us For More",
                       style: CustomTextStyles.MerriweatherBlackstyle24),
-                  Text("for more", style: CustomTextStyles.Merriweatherstyle24),
                 ],
               ),
             ),
