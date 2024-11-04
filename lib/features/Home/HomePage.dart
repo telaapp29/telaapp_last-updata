@@ -243,7 +243,7 @@ class _HomePageState extends State<HomePage> {
                 containerColor1: AppColor.lightGreen,
                 containerColor2: AppColor.white,
                 image: "assets/images/image2.png",
-                path: "/Game",
+                path: "/Stories",
 
                   ),
               Games(
@@ -251,7 +251,7 @@ class _HomePageState extends State<HomePage> {
                 containerColor1: AppColor.yellow,
                 containerColor2: AppColor.white,
                 image: "assets/images/image3.png",
-                path: "/Stories",
+                path: "/Game",
               ),
               if (isNoScore)
                 const Padding(
