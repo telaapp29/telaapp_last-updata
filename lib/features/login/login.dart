@@ -116,7 +116,7 @@ class _SignInState extends State<SignIn> {
                               borderRadius: BorderRadius.circular(6)),
                         ),
                         Text(
-                          "remember me?",
+                          "Remember Me?",
                           style: CustomTextStyles.Merriweatherstyle15.copyWith(
                               color: AppColor.dBlack),
                         )
@@ -125,7 +125,7 @@ class _SignInState extends State<SignIn> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsets.only(left: 31, bottom: 107, right: 17),
+                        const EdgeInsets.only(left: 65, bottom: 107, right: 65),
                     child: HaveAnAccount(
                       text1: "Not yet registered? ",
                       text2: "Sign up ",
@@ -137,7 +137,7 @@ class _SignInState extends State<SignIn> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 149, right: 71),
+                    padding: const EdgeInsets.only(left: 85, right: 75),
                     child: Text(
                       "Need help?",
                       style: CustomTextStyles.Merriweather100style90.copyWith(
