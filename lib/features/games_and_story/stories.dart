@@ -110,7 +110,7 @@ class Stories extends StatelessWidget {
                         "\"And I have an idea...\nLet's plant more flowers together!\"",
                       ], [
                         "a21.JPG",
-                        "IMG_6012.JPG",
+                        "IMG_6012.jpg",
                         "IMG_6013.JPG",
                         "IMG_6014.JPG",
                         "IMG_6015.JPG",
