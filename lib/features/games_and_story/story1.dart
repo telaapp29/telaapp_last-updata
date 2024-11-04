@@ -316,6 +316,7 @@ Widget ImageStory(String image)=> Container(
     String text9=translateTextOf9Story(widget.storyModel.textStory[8]);
     String text10=translateTextOf10Story(widget.storyModel.textStory[9]);
     String text11=translateTextOf11Story(widget.storyModel.textStory[10]);
+    String text12=translateTextOf11Story(widget.storyModel.textStory[11]);
     String text22=translateTextOf22Story("The End");
 
 
@@ -441,27 +442,27 @@ Widget ImageStory(String image)=> Container(
                   ImageStory(widget.storyModel.imageStory[0]),
                   tStory(text1,widget.storyModel.textStory[0]),
                   ImageStory(widget.storyModel.imageStory[1]),
-                  tStory(text1,widget.storyModel.textStory[1]),
+                  tStory(text2,widget.storyModel.textStory[1]),
                   ImageStory(widget.storyModel.imageStory[2]),
-                  tStory(text1,widget.storyModel.textStory[2]),
+                  tStory(text3,widget.storyModel.textStory[2]),
                   ImageStory(widget.storyModel.imageStory[3]),
-                  tStory(text1,widget.storyModel.textStory[3]),
+                  tStory(text4,widget.storyModel.textStory[3]),
                   ImageStory(widget.storyModel.imageStory[4]),
-                  tStory(text1,widget.storyModel.textStory[4]),
+                  tStory(text5,widget.storyModel.textStory[4]),
                   ImageStory(widget.storyModel.imageStory[5]),
-                  tStory(text1,widget.storyModel.textStory[5]),
+                  tStory(text6,widget.storyModel.textStory[5]),
                   ImageStory(widget.storyModel.imageStory[6]),
-                  tStory(text1,widget.storyModel.textStory[6]),
+                  tStory(text7,widget.storyModel.textStory[6]),
                   ImageStory(widget.storyModel.imageStory[7]),
-                  tStory(text1,widget.storyModel.textStory[7]),
+                  tStory(text8,widget.storyModel.textStory[7]),
                   ImageStory(widget.storyModel.imageStory[8]),
-                  tStory(text1,widget.storyModel.textStory[8]),
+                  tStory(text9,widget.storyModel.textStory[8]),
                   ImageStory(widget.storyModel.imageStory[9]),
-                  tStory(text1,widget.storyModel.textStory[9]),
+                  tStory(text10,widget.storyModel.textStory[9]),
                   ImageStory(widget.storyModel.imageStory[10]),
-                  tStory(text1,widget.storyModel.textStory[10]),
+                  tStory(text11,widget.storyModel.textStory[10]),
                   ImageStory(widget.storyModel.imageStory[11]),
-                  tStory(text1,widget.storyModel.textStory[11]),
+                  tStory(text12,widget.storyModel.textStory[11]),
                   ImageStory(widget.storyModel.imageStory[12]),
                   ImageStory(widget.storyModel.imageStory[13]),
                   ImageStory(widget.storyModel.imageStory[14]),
