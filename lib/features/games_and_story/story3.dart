@@ -317,15 +317,15 @@ Widget ImageStory(String image)=> Container(
     String text9=translateTextOf9Story(widget.storyModel.textStory[8]);
     String text10=translateTextOf10Story(widget.storyModel.textStory[9]);
     String text11=translateTextOf11Story(widget.storyModel.textStory[10]);
-    String text12=translateTextOf11Story(widget.storyModel.textStory[11]);
-    String text13=translateTextOf11Story(widget.storyModel.textStory[12]);
-    String text14=translateTextOf11Story(widget.storyModel.textStory[13]);
-    String text15=translateTextOf11Story(widget.storyModel.textStory[14]);
-    String text16=translateTextOf11Story(widget.storyModel.textStory[15]);
-    String text17=translateTextOf11Story(widget.storyModel.textStory[16]);
-    String text18=translateTextOf11Story(widget.storyModel.textStory[17]);
-    String text19=translateTextOf11Story(widget.storyModel.textStory[18]);
-    String text20=translateTextOf11Story(widget.storyModel.textStory[19]);
+    String text12=translateTextOf12Story(widget.storyModel.textStory[11]);
+    String text13=translateTextOf13Story(widget.storyModel.textStory[12]);
+    String text14=translateTextOf14Story(widget.storyModel.textStory[13]);
+    String text15=translateTextOf15Story(widget.storyModel.textStory[14]);
+    String text16=translateTextOf16Story(widget.storyModel.textStory[15]);
+    String text17=translateTextOf17Story(widget.storyModel.textStory[16]);
+    String text18=translateTextOf18Story(widget.storyModel.textStory[17]);
+    String text19=translateTextOf19Story(widget.storyModel.textStory[18]);
+    String text20=translateTextOf20Story(widget.storyModel.textStory[19]);
     String text22=translateTextOf22Story("The End");
 
 
