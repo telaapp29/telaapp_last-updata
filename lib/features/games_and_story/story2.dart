@@ -317,7 +317,7 @@ Widget ImageStory(String image)=> Container(
     String text9=translateTextOf9Story(widget.storyModel.textStory[8]);
     String text10=translateTextOf10Story(widget.storyModel.textStory[9]);
     String text11=translateTextOf11Story(widget.storyModel.textStory[10]);
-    String text12=translateTextOf11Story(widget.storyModel.textStory[11]);
+    String text12=translateTextOf12Story(widget.storyModel.textStory[11]);
     String text22=translateTextOf22Story("The End");
 
 
