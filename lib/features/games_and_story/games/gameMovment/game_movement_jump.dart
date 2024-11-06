@@ -209,7 +209,7 @@ class _GameMovementJumpState extends State<GameMovementJump> {
                       child: Stack(
                         children: [
                           Image.asset(
-                            (userType == "Boy")
+                            (true)
                                 ?((st)? ((replace)?"assets/images/1.jpg": "assets/images/2.jpg"):"assets/images/0.jpg" )
                                 :((true)? "assets/images/girl.png": ""),
                             width: 290,
