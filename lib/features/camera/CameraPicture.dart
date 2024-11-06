@@ -1,3 +1,6 @@
+
+
+
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
@@ -112,74 +115,78 @@ class _CameraPictureState extends State<CameraPicture> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 130),
-                child: CustomBtn(
-                  text: nameOfImageAr,
-                  color: AppColor.purple,
-                  onPressed: () => textToSpeech(nameOfImageAr, 'ar'),
-                  width: 300,
-                  height: 70,
-                  style: CustomTextStyles.Merriweather100style90.copyWith(color: AppColor.white, fontSize: 20),
-                ),
-              ),
-              InkWell(
-                onTap: () => textToSpeech(descriptionOfImageAr, 'ar'),
-                child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 50),
-                  width: 400,
-                  height: 20,
-                  child: Text(
-                    descriptionOfImageAr,
-                    textDirection: TextDirection.ltr,
-                    style: CustomTextStyles.MerriweatherBlackstyle24.copyWith(color: AppColor.black),
+
+              Column(
+
+                children: [
+                  SizedBox(width: 20,height: 20,),
+                  CustomBtn(
+                    text: nameOfImageAr,
+                    color: AppColor.purple,
+                    onPressed: () => textToSpeech(nameOfImageAr, 'ar'),
+                    width: 300,
+                    height: 70,
+                    style: CustomTextStyles.Merriweather100style90.copyWith(color: AppColor.white, fontSize: 20),
                   ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 7, left: 75, bottom: 7),
-                child: CustomBtn(
-                  text: nameOfImage,
-                  color: AppColor.cyan2,
-                  onPressed: () => textToSpeech(nameOfImage, 'en-US'),
-                  width: 200,
-                  height: 70,
-                  style: CustomTextStyles.Merriweather100style90.copyWith(color: AppColor.white, fontSize: 20),
-                ),
-              ),
-              InkWell(
-                onTap: () => textToSpeech(descriptionOfImage, 'en-US'),
-                child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 40),
-                  width: 400,
-                  height: 20,
-                  child: Text(
-                    descriptionOfImage,
-                    style: CustomTextStyles.MerriweatherBlackstyle24.copyWith(color: AppColor.black, fontSize: 12),
+                  SizedBox(width: 20,height: 20,),
+
+                  InkWell(
+                    onTap: () => textToSpeech(descriptionOfImageAr, 'ar'),
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 50),
+                      width: 400,
+                      height: 20,
+                      child: Text(
+                        descriptionOfImageAr,
+                        textDirection: TextDirection.ltr,
+                        style: CustomTextStyles.MerriweatherBlackstyle24.copyWith(color: AppColor.black),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 40, left: 88, right: 100),
-                child: CustomBtn(
-                  text: "Take Picture...",
-                  onPressed: () => pickImage(ImageSource.camera),
-                  width: 320,
-                  height: 50,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 2, left: 270, bottom: 10),
-                child: CustomBtn(
-                  text: "",
-                  width: 90,
-                  height: 55,
-                  onPressed: () {
-                    customRemoveNavigate(context);
-                  },
-                ).customButton(
-                  const Icon(Icons.home_outlined, size: 60, color: AppColor.black),
-                ),
+                  SizedBox(width: 20,height: 20,),
+
+                  CustomBtn(
+                    text: nameOfImage,
+                    color: AppColor.cyan2,
+                    onPressed: () => textToSpeech(nameOfImage, 'en-US'),
+                    width: 200,
+                    height: 70,
+                    style: CustomTextStyles.Merriweather100style90.copyWith(color: AppColor.white, fontSize: 20),
+                  ),
+                  SizedBox(width: 20,height: 20,),
+
+                  InkWell(
+                    onTap: () => textToSpeech(descriptionOfImage, 'en-US'),
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 40),
+                      width: 400,
+                      height: 20,
+                      child: Text(
+                        descriptionOfImage,
+                        style: CustomTextStyles.MerriweatherBlackstyle24.copyWith(color: AppColor.black, fontSize: 12),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,height: 20,),
+                  CustomBtn(
+                    text: "Take Picture...",
+                    onPressed: () => pickImage(ImageSource.camera),
+                    width: 320,
+                    height: 50,
+                  ),
+                  SizedBox(width: 20,height: 70,),
+
+                  CustomBtn(
+                    text: "",
+                    width: 90,
+                    height: 55,
+                    onPressed: () {
+                      customRemoveNavigate(context);
+                    },
+                  ).customButton(
+                    const Icon(Icons.home_outlined, size: 60, color: AppColor.black),
+                  ),
+                ],
               ),
             ],
           ),
