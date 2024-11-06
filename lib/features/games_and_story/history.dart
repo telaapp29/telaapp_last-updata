@@ -21,11 +21,10 @@ class History extends StatefulWidget {
 class _HistoryState extends State<History> {
   Sql sql = Sql();
   late Timer _timer;
-  int _seconds = 0;
-int secondCount=getIt<CacheHelper>().getData(key: "second");
+int _seconds=getIt<CacheHelper>().getData(key: "second");
+
   @override
   void initState() {
-    _seconds = widget.second;
     // TODO: implement initState
     super.initState();
    _timer= Timer.periodic(
@@ -33,8 +32,8 @@ int secondCount=getIt<CacheHelper>().getData(key: "second");
           seconds: 1,
         ), (timer) {
       setState(() {
-        _seconds++;
-        if (_seconds >=secondCount) {
+        _seconds--;
+        if (_seconds ==0) {
          // exit(0);
           _timer.cancel();
           customNavigate(context, '/');
