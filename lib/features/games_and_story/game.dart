@@ -171,7 +171,7 @@ class _GameState extends State<Game> {
                           "assets/images/jump.jpg",
                           const GameMovementJump(),
                           score6),
-                      child: game1("jump.jpg", "Movement", "Game jump")),
+                      child: game1("0.jpg", "Movement", "Game jump")),
                   GestureDetector(
                       onTap: () => insertData(
                           "Movement Game Rotate",

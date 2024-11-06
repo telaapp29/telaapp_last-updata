@@ -29,8 +29,11 @@ class _GameMovementJumpState extends State<GameMovementJump> {
   double counterWalk = 0.0;
   bool begin = false;
   bool end = false;
+  bool replace=true;
+  bool st=false;
   int counterJump = 0;
   double jump = 0.0;
+  int d=0;
   int button1 = 0;
   var userId=getIt<CacheHelper>().getData(key: "login");
   var userType = getIt<CacheHelper>().getData(key: "loginTypeUser");
@@ -39,7 +42,7 @@ class _GameMovementJumpState extends State<GameMovementJump> {
   );
   Sql sql=Sql();
   int score=0;
-  String text = "هيا لنقفز  معاً عشرة قفزات";
+  String text = "هيا لنبداء  التمرين  معا";
   int _seconds = 0;
   late Timer _timer;
   readUserScore()async{
@@ -94,25 +97,23 @@ class _GameMovementJumpState extends State<GameMovementJump> {
                   setState(() {
                     readUserScore();
                     begin = true;
-                    counterWalk = jump;
+                    // counterWalk = jump;
                     if (counterJump == 0) {
                       textToSpeech(text, 'ar');
                     }
                     jump += 100;
                     if (jump > 100) {
+                      st=true;
+                      replace=!replace;
                       counterJump++;
                       text = counterJump.toString();
                       textToSpeech(counterJump.toString(), 'ar');
                     }
 
-                    if (jump >= height) {
-                      jump = 0.0;
-                      //counterJump=0;
-                    }
-                    if (counterJump >10) {
+                    if (counterJump >10 ) {
                       end = true;
                       begin = false;
-                      text = "  لقد انجزنا مهمة القفز";
+                      text = "  لقد انجزنا المهمة ";
                       counterJump-=1;
                       textToSpeech(text, 'ar');
                       button1 = 1;
@@ -200,7 +201,7 @@ class _GameMovementJumpState extends State<GameMovementJump> {
                     onTap: () {
                       setState(() {
                         Transform.scale(
-                          scale: 2,
+                          scale: 3,
                         );
                       });
                     },
@@ -209,21 +210,11 @@ class _GameMovementJumpState extends State<GameMovementJump> {
                         children: [
                           Image.asset(
                             (userType == "Boy")
-                                ? "assets/images/boy.png"
-                                : "assets/images/girl.png",
-                            width: 150,
-                            height: 150,
+                                ?((st)? ((replace)?"assets/images/1.jpg": "assets/images/2.jpg"):"assets/images/0.jpg" )
+                                :((true)? "assets/images/girl.png": ""),
+                            width: 290,
+                            height: 200,
                           ),
-                          Positioned(
-                              top: (userType == "Boy") ? 75 : 70,
-                              right: (userType == "Boy") ? 5 : 7,
-                              left: 3,
-                              bottom: (userType == "Boy") ? 2 : 0,
-                              child: Image.asset(
-                                clothes,
-                                width: 150,
-                                height: 150,
-                              )),
                         ],
                       ),
                     ),
