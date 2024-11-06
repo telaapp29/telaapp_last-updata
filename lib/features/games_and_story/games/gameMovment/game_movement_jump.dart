@@ -211,7 +211,7 @@ class _GameMovementJumpState extends State<GameMovementJump> {
                           Image.asset(
                             (true)
                                 ?((st)? ((replace)?"assets/images/1.jpg": "assets/images/2.jpg"):"assets/images/0.jpg" )
-                                :((true)? "assets/images/girl.png": ""),
+                                :"",
                             width: 290,
                             height: 200,
                           ),

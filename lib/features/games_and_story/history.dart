@@ -7,6 +7,7 @@ import 'package:telaproject/core/utils/app_text_style.dart';
 import '../../core/Functions/functions.dart';
 import '../../core/database/cash/cache_helper.dart';
 import '../../core/utils/app_colors.dart';
+import '../login/login.dart';
 
 class History extends StatefulWidget {
   const History({super.key, required this.second});
@@ -34,7 +35,10 @@ int secondCount=getIt<CacheHelper>().getData(key: "second");
       setState(() {
         _seconds++;
         if (_seconds >=secondCount) {
-          exit(0);
+         // exit(0);
+          _timer.cancel();
+          customNavigate(context, '/');
+
         }
       });
     });

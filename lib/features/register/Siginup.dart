@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
 import 'package:telaproject/core/database/sql.dart';
 import 'package:telaproject/core/utils/app_colors.dart';
@@ -11,7 +13,6 @@ import '../../core/widgets/custom_text_field.dart';
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
 
-
   @override
   State<SignUp> createState() => _SignUpState();
 }
@@ -20,11 +21,21 @@ class _SignUpState extends State<SignUp> {
   bool isInsertedTrue = false;
   var userType = getIt<CacheHelper>().getData(key: "userType");
 
+  Sql sql = Sql();
+  final TextEditingController firstName = TextEditingController();
+  final TextEditingController lastName = TextEditingController();
+  final TextEditingController password = TextEditingController();
+  final TextEditingController rePassword = TextEditingController();
+  final TextEditingController number = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
+
+  String hashPassword(String password) {
+    final bytes = utf8.encode(password); // Convert password to bytes
+    return sha256.convert(bytes).toString(); // Hash and convert to hex
+  }
+
   readUserId() async {
-    var response = await sql.readUserId(
-      firstName.text,
-      lastName.text,
-    );
+    var response = await sql.readUserId(firstName.text, lastName.text);
     if (response == true) {
       print(sql.userIdInserted);
     } else {
@@ -33,10 +44,7 @@ class _SignUpState extends State<SignUp> {
   }
 
   readToInsert() async {
-    var response = await sql.readUserId(
-      firstName.text,
-      lastName.text,
-    );
+    var response = await sql.readUserId(firstName.text, lastName.text);
     if (response == true) {
       setState(() {
         isInsertedTrue = true;
@@ -45,14 +53,6 @@ class _SignUpState extends State<SignUp> {
       customNavigate(context, '/');
     }
   }
-
-  Sql sql = Sql();
-  final TextEditingController firstName = TextEditingController();
-  final TextEditingController lastName = TextEditingController();
-  final TextEditingController password = TextEditingController();
-  final TextEditingController rePassword = TextEditingController();
-  final TextEditingController number = TextEditingController();
-  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -65,28 +65,14 @@ class _SignUpState extends State<SignUp> {
           children: [
             Center(child: titleOfApp(29.0)),
             Padding(
-              padding: const EdgeInsets.only(
-                bottom: 2,
-                right: 63,
-                left: 63,
-              ),
+              padding: const EdgeInsets.only(bottom: 2, right: 63, left: 63),
               child: Form(
                 key: _formKey,
                 child: Column(
                   children: [
-                    CustomTextField(
-                      textHint: "First Name",
-                      nameField: firstName,
-                    ),
-                    CustomTextField(
-                      textHint: "Last Name",
-                      nameField: lastName,
-                    ),
-                    CustomTextField(
-                      textHint: "password",
-                      field: true,
-                      nameField: password,
-                    ),
+                    CustomTextField(textHint: "First Name", nameField: firstName),
+                    CustomTextField(textHint: "Last Name", nameField: lastName),
+                    CustomTextField(textHint: "Password", field: true, nameField: password),
                     CustomTextField(
                       textHint: "Re Enter Password",
                       nameField: rePassword,
@@ -94,17 +80,13 @@ class _SignUpState extends State<SignUp> {
                       pass1: password,
                       pass2: rePassword,
                     ),
-                    CustomTextField(
-                      textHint: "Number",
-                      nameField: number,
-                    ),
+                    CustomTextField(textHint: "Number", nameField: number),
                   ],
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                  top: 37, left: 99, right: 60, bottom: 101),
+              padding: const EdgeInsets.only(top: 37, left: 99, right: 60, bottom: 101),
               child: CustomBtn(
                 text: "Register",
                 width: 279,
@@ -113,15 +95,24 @@ class _SignUpState extends State<SignUp> {
                   if (_formKey.currentState!.validate()) {
                     readToInsert();
                     if (isInsertedTrue == false) {
+                      // Hash the password before storing it
+                      final hashedPassword = hashPassword(password.text);
+
                       final result1 = sql.insertData(
-                          'INSERT INTO UserInformation(first_name,last_name,Password,Number,type_user,score) VALUES("${firstName.text}", "${lastName.text}", "${password.text}","${number.text}","$userType","${0}")');
+                        'INSERT INTO UserInformation(first_name, last_name, Password, Number, type_user, score) '
+                            'VALUES("${firstName.text}", "${lastName.text}", "$hashedPassword", "${number.text}", "$userType", "${0}")',
+                      );
+
                       readUserId();
-                        var result2 = sql.insertData(
-                            'INSERT INTO Clothes(image_clothes,user_id) VALUES("${(userType=="boy")?"boy7.png":"girl11.png"}", "${sql.userIdInserted}")');
-                      if (result1 != null && result2!=null) {
+                      var result2 = sql.insertData(
+                        'INSERT INTO Clothes(image_clothes, user_id) '
+                            'VALUES("${(userType == "boy") ? "boy7.png" : "girl11.png"}", "${sql.userIdInserted}")',
+                      );
+
+                      if (result1 != null && result2 != null) {
                         print("Inserted data");
                       } else {
-                        print("no inserted ");
+                        print("No data inserted");
                       }
                     }
                   }
@@ -129,27 +120,24 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(
-                left: 154,
-              ),
+              padding: EdgeInsets.only(left: 154),
               child: Row(
                 children: [
-                  Text("Contact Us For More",
-                      style: CustomTextStyles.MerriweatherBlackstyle24),
+                  Text("Contact Us For More", style: CustomTextStyles.MerriweatherBlackstyle24),
                 ],
               ),
             ),
             if (isInsertedTrue)
               Padding(
-                  padding: const EdgeInsets.only(
-                    top: 15,
-                    left: 40,
+                padding: const EdgeInsets.only(top: 15, left: 40),
+                child: Text(
+                  "The First Name and Last Name already exist",
+                  style: CustomTextStyles.Merriweatherstyle15.copyWith(
+                    color: AppColor.red,
+                    fontSize: 14,
                   ),
-                  child: Text(
-                    "The FirstName and LastName is Founded",
-                    style: CustomTextStyles.Merriweatherstyle15.copyWith(
-                        color: AppColor.red, fontSize: 14),
-                  )),
+                ),
+              ),
           ],
         ),
       ),
