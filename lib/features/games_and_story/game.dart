@@ -31,7 +31,6 @@ class Game extends StatefulWidget {
 Sql sql = Sql();
 
 class _GameState extends State<Game> {
-  int resultScore = 0;
   int score1 = 0;
   int score2 = 0;
   int score3 = 0;
@@ -51,6 +50,7 @@ class _GameState extends State<Game> {
     });
   }
   void navigate(router, int score) {
+    int resultScore = 0;
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (context) => router))
         .then((value) {
@@ -61,7 +61,7 @@ class _GameState extends State<Game> {
           resultScore += score;
           sql.updateData(
               "update UserInformation set score='${sql.score+resultScore}' where user_id ='$userId'");
-          print(resultScore);
+          print( resultScore);
         });
       }
     });
@@ -73,6 +73,7 @@ class _GameState extends State<Game> {
     final result = await sql.insertData(
         'INSERT INTO History(name_of_content,user_id,image) VALUES("$nameOfGame", "$userId","$pathImage")');
     if (result != null) {
+      print("s= $score");
       navigate(router, score);
       print("Inserted data");
     } else {

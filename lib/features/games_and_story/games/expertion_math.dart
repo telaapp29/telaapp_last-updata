@@ -57,23 +57,35 @@ class _MathPageState extends State<MathPage> {
               child: CustomBtn(
                 text: "مـــــوافق",
                 onPressed: () {
+                  score=0;
                   if (answer1.text == "4") {
-                    score += 10;
+                    score += 15;
+                    print(score);
                   }
                   if (answer2.text == "36") {
-                    score += 10;
+                    score += 15;
+                    print(score);
+
                   }
                   if (answer3.text == "8") {
-                    score += 10;
+                    score += 15;
+                    print(score);
+
                   }
                   if (answer4.text == "5") {
-                    score += 10;
+                    score += 15;
+                    print(score);
+
                   }
                   if (answer5.text == "16") {
-                    score += 10;
+                    score += 15;
+                    print(score);
+
                   }
                   if (answer6.text == "14") {
-                    score += 10;
+                    score += 15;
+                    print(score);
+
                   }
                   if (_formKey.currentState!.validate()) {
                     Navigator.of(context).pop(score);

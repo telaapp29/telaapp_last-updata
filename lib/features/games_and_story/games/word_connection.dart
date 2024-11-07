@@ -210,7 +210,9 @@ class _WordConnectionState extends State<WordConnection> {
                         ),
                         child: TextButton(
                           onPressed: () {
-                            Navigator.of(context).pop(score);
+                            int score_= score;
+                            score=0;
+                            Navigator.of(context).pop(score_);
                           },
                           child: Text("Exit"),
                         ),
@@ -227,6 +229,7 @@ class _WordConnectionState extends State<WordConnection> {
     if (score == 100)
       return 'Awesome';
     else {
+      score=0;
       return 'Play again to get better Score';
     }
   }
