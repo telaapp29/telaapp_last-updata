@@ -43,8 +43,6 @@ class _GameMovementJumpState extends State<GameMovementJump> {
   Sql sql=Sql();
   int score=0;
   String text = "هيا لنبداء  التمرين  معا";
-  int _seconds = 0;
-  late Timer _timer;
   readUserScore()async{
     var response=await sql.readUserScore(userId);
     if(response == true){
@@ -60,20 +58,6 @@ class _GameMovementJumpState extends State<GameMovementJump> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _timer=Timer.periodic(
-        const Duration(
-          seconds: 1,
-        ), (timer) {
-      setState(() {
-        _seconds++;
-      });
-    });
-  }
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-    _timer.cancel();
   }
   @override
   Widget build(BuildContext context) {
@@ -127,7 +111,7 @@ class _GameMovementJumpState extends State<GameMovementJump> {
                   size: 30,
                   color: AppColor.white,
                 ),
-                tooltip: "Jump",
+                tooltip: "ex1",
               ),
             ),
           if(button1==1)
@@ -190,7 +174,6 @@ class _GameMovementJumpState extends State<GameMovementJump> {
                 child: Text(text,style: CustomTextStyles.Interstyle25.copyWith(color: AppColor.white)),),
               Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
-                child: Text("$_seconds",style: CustomTextStyles.MerriweatherBlackstyle24.copyWith(fontSize: 24,),),
               ),
               Transform.translate(
                   offset: Offset(

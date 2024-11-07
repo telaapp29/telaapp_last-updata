@@ -160,25 +160,25 @@ class _GameState extends State<Game> {
                           fillinTheblanke(context, "English", "/FillEnglish")),
                   GestureDetector(
                       onTap: () => insertData(
-                          "Movement Game walk",
-                          "assets/images/walk.jpg",
+                          "Back Turns",
+                          "assets/images/4.jpg",
                           const GameMovementWalk(),
                           score5),
-                      child: game1("walk.jpg", "Movement", "Game walk")),
+                      child: game1("4.jpg", "Exercise1", "Back Turns")),
                   GestureDetector(
                       onTap: () => insertData(
-                          "Movement Game jump",
-                          "assets/images/jump.jpg",
+                          "Side Bends",
+                          "assets/images/0.jpg",
                           const GameMovementJump(),
                           score6),
-                      child: game1("0.jpg", "Movement", "Game jump")),
+                      child: game1("0.jpg", "Exercise2", "Side Bends")),
                   GestureDetector(
                       onTap: () => insertData(
-                          "Movement Game Rotate",
-                          "assets/images/rotate.png",
+                          "Wind Mills",
+                          "assets/images/7.jpg",
                           const GameMovementRotate(),
                           score7),
-                      child: game1("rotate.png", "Movement", "G-Rout")),
+                      child: game1("7.jpg", "Exercise3", "Wind Mills")),
                 ],
               ),
             ),
