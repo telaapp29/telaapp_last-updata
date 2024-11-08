@@ -125,7 +125,7 @@ class _GameMovementJumpState extends State<GameMovementJump> {
                     borderRadius: BorderRadius.circular(50)),
                 onPressed: () {
                   setState(() {
-                    score=10;
+                    score=100;
                     sql.updateData(
                         "update UserInformation set score='${sql.score+score}' where user_id ='${userId}'");
                     Navigator.of(context).pop(score);
