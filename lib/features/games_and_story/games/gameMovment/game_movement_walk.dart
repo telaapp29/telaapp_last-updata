@@ -43,7 +43,6 @@ class _GameMovementWalkState extends State<GameMovementWalk> {
   Sql sql=Sql();
   int score=0;
   String text = "هيا لنبداء  التمرين  معا";
-  int _seconds = 0;
   readUserScore()async{
     var response=await sql.readUserScore(userId);
     if(response == true){
