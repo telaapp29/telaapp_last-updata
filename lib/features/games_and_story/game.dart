@@ -20,6 +20,7 @@ import '../../core/widgets/custom_btn.dart';
 import 'Widgets/widget.dart';
 import 'games/gameMovment/game_movement_walk.dart';
 import 'games/word_connection.dart';
+import 'games/word_connection1.dart';
 
 class Game extends StatefulWidget {
   const Game({super.key});
@@ -140,6 +141,13 @@ class _GameState extends State<Game> {
                           const WordConnection(),
                           score1),
                       child: game1("image4.png", "connecting", "the words")),
+                  GestureDetector(
+                      onTap: () => insertData(
+                          "Matching Img with Word",
+                          "assets/images/Tela/IMG_6484.JPG",
+                          const WordConnection1(),
+                          score1),
+                      child: game1("Tela/IMG_6484.JPG", "Matching", "Img with Word")),
                   GestureDetector(
                       onTap: () => insertData("ExpertionArthimtic",
                           "assets/images/15.jpeg", const MathPage(), score2),
